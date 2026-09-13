@@ -1,0 +1,2847 @@
+
+/* =========================================================
+   VIDROART - IDENTIDADE VISUAL
+   Azul + Vermelho + Azul-marinho + Branco
+   ========================================================= */
+
+:root {
+    --azul: #0066cc;
+    --azul-claro: #168cff;
+    --azul-escuro: #071426;
+    --azul-medio: #0d3f73;
+
+    --vermelho: #e50914;
+    --vermelho-claro: #ff2733;
+    --vermelho-escuro: #a8000a;
+
+    --branco: #ffffff;
+    --cinza-claro: #f4f6f8;
+    --cinza: #cfd5dc;
+    --cinza-escuro: #333333;
+
+    --preto: #05080d;
+
+    --sombra: rgba(0, 0, 0, 0.35);
+    --sombra-forte: rgba(0, 0, 0, 0.65);
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--branco);
+    color: var(--cinza-escuro);
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   TOPO
+   ========================================================= */
+
+.topo {
+    width: 100%;
+    height: 40px;
+
+    background: linear-gradient(
+        90deg,
+        var(--azul-escuro),
+        var(--azul),
+        var(--vermelho)
+    );
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================================
+   MENU
+   ========================================================= */
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    min-height: 70px;
+
+    position: fixed;
+    top: 40px;
+    left: 0;
+
+    padding: 8px 30px;
+
+    background: rgba(255, 255, 255, 0.97);
+
+    border-bottom: 2px solid rgba(0, 102, 204, 0.15);
+
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+
+    z-index: 999;
+
+    backdrop-filter: blur(10px);
+}
+
+
+/* =========================================================
+   MENU - LINKS
+   ========================================================= */
+
+.mn {
+    position: relative;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    color: var(--azul-escuro);
+
+    width: 110px;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.mn::after {
+    content: "";
+
+    position: absolute;
+
+    width: 0;
+    height: 2px;
+
+    left: 50%;
+    bottom: -8px;
+
+    background: linear-gradient(
+        90deg,
+        var(--azul),
+        var(--vermelho)
+    );
+
+    transform: translateX(-50%);
+
+    transition: 0.3s ease;
+}
+
+.mn:hover {
+    color: var(--vermelho);
+}
+
+.mn:hover::after {
+    width: 70%;
+}
+
+
+/* =========================================================
+   CABEÇALHO / BANNER
+   ========================================================= */
+
+.cabeca {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(5, 8, 13, 0.988),
+            rgba(7, 20, 38, 0.877),
+            rgba(0, 102, 204, 0.323)
+        ),
+        url('img/banner.png');
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    width: 100%;
+    min-height: 600px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    margin: 40px 0 0 0;
+
+    position: relative;
+}
+
+.cabeca::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 5px;
+
+    background: linear-gradient(
+        90deg,
+        var(--azul),
+        var(--azul-claro),
+        var(--vermelho),
+        var(--vermelho-claro)
+    );
+}
+
+
+/* =========================================================
+   FIGURA
+   ========================================================= */
+
+.figura {
+    width: 350px;
+    padding-top: 70px;
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.logo {
+    width: 150px;
+    height: auto;
+
+    border-radius: 100%;
+    object-fit: contain;
+
+    filter: drop-shadow(
+        0 8px 15px rgba(0, 0, 0, 0.35)
+    );
+}
+
+
+/* =========================================================
+   LETREIRO
+   ========================================================= */
+
+.letreiro {
+    background: rgba(5, 8, 13, 0.65);
+
+    border-left: 4px solid var(--vermelho);
+
+    border-radius: 8px;
+
+    padding: 25px 30px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.35),
+        inset 0 0 20px rgba(0, 102, 204, 0.08);
+
+    backdrop-filter: blur(8px);
+}
+
+
+/* =========================================================
+   SUBTÍTULO
+   ========================================================= */
+
+.subtitulo {
+    font-family: 'Inter', sans-serif;
+
+    font-size: 18px;
+
+    font-weight: 400;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    color: var(--branco);
+}
+
+
+/* =========================================================
+   TÍTULO
+   ========================================================= */
+
+.titulo {
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 40px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    color: var(--branco);
+
+    margin-top: 8px;
+}
+
+.titulo strong {
+    color: var(--vermelho);
+}
+
+
+/* =========================================================
+   TRAÇO
+   ========================================================= */
+
+.traco {
+    color: var(--azul-claro);
+
+    font-size: 50px;
+
+    font-weight: 500;
+
+    text-shadow:
+        0 0 10px rgba(22, 140, 255, 0.6);
+}
+
+
+/* =========================================================
+   OPÇÕES
+   ========================================================= */
+
+.opcao {
+    width: auto;
+
+    display: flex;
+
+    justify-content: space-around;
+
+    align-items: center;
+
+    margin-right: 40px;
+
+    gap: 10px;
+}
+
+
+/* =========================================================
+   BOTÃO PRINCIPAL
+   ========================================================= */
+
+.botao {
+    font-family: 'Poppins', sans-serif;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    color: var(--branco);
+
+    width: 120px;
+
+    height: 40px;
+
+    background: linear-gradient(
+        135deg,
+        var(--vermelho),
+        var(--vermelho-escuro)
+    );
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 15px rgba(229, 9, 20, 0.30);
+
+    transition: all 0.3s ease;
+}
+
+.botao:hover {
+    background: linear-gradient(
+        135deg,
+        var(--azul),
+        var(--azul-escuro)
+    );
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 102, 204, 0.35);
+}
+
+
+/* =========================================================
+   BOTÃO SECUNDÁRIO
+   ========================================================= */
+
+.botao1 {
+    font-family: 'Poppins', sans-serif;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    color: var(--azul-escuro);
+
+    width: 120px;
+
+    height: 40px;
+
+    background-color: var(--branco);
+
+    border: 2px solid var(--azul);
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.botao1:hover {
+    color: var(--branco);
+
+    background: linear-gradient(
+        135deg,
+        var(--azul),
+        var(--azul-escuro)
+    );
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   GRUPO DE BOTÕES
+   ========================================================= */
+
+.botoes {
+    display: flex;
+
+    justify-content: space-around;
+
+    width: 300px;
+
+    padding-top: 30px;
+
+    margin: 0;
+
+    gap: 15px;
+}
+
+
+/* =========================================================
+   DEMONSTRATIVO
+   ========================================================= */
+
+.demostrativo {
+    width: 100%;
+
+    min-height: 150px;
+
+    display: flex;
+
+    justify-content: space-around;
+
+    align-items: center;
+
+    background-color: var(--branco);
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.produt {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+/* =========================================================
+   ÍCONES
+   ========================================================= */
+
+.icon {
+    width: 70px;
+
+    padding-right: 7px;
+
+    padding-bottom: 30px;
+
+    filter:
+        drop-shadow(
+            0 5px 8px rgba(0, 102, 204, 0.20)
+        );
+}
+
+
+/* =========================================================
+   TÍTULOS
+   ========================================================= */
+
+.title {
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 25px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    color: var(--azul-escuro);
+}
+
+.subtitle {
+    font-family: 'Inter', sans-serif;
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    color: var(--vermelho);
+}
+
+
+/* =========================================================
+   FRASE
+   ========================================================= */
+
+.frase {
+    background: linear-gradient(
+        100deg,
+        var(--azul-escuro),
+        var(--azul-medio),
+        var(--azul)
+    );
+
+    width: 100%;
+
+    min-height: 140px;
+
+    display: flex;
+
+    justify-content: space-around;
+
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.frase::after {
+    content: "";
+
+    position: absolute;
+
+    right: -100px;
+    top: -100px;
+
+    width: 300px;
+    height: 300px;
+
+    border: 40px solid rgba(229, 9, 20, 0.25);
+
+    transform: rotate(45deg);
+}
+
+.frase > h1 {
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    color: var(--branco);
+
+    z-index: 2;
+}
+
+.frase > h4 {
+    font-family: 'Lora', serif;
+
+    font-weight: 400;
+
+    font-size: 22px;
+
+    line-height: 1.2;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    z-index: 2;
+}
+
+.animar {
+    width: 150px;
+}
+
+
+/* =========================================================
+   SEÇÃO ORÇAMENTO
+   ========================================================= */
+
+.elemento {
+    width: 100%;
+
+    min-height: 600px;
+
+    background-image:
+        linear-gradient(
+            to right,
+            rgba(5, 8, 13, 0.95),
+            rgba(7, 20, 38, 0.80),
+            rgba(0, 0, 0, 0.15)
+        ),
+        url('orcament.png');
+
+    background-position: right center;
+
+    background-size: cover;
+
+    background-repeat: no-repeat;
+
+    display: flex;
+
+    justify-content: space-around;
+
+    align-items: center;
+
+    position: relative;
+}
+
+.elemento::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 6px;
+    height: 100%;
+
+    background: linear-gradient(
+        to bottom,
+        var(--azul),
+        var(--vermelho)
+    );
+}
+
+.elemento1 {
+    background: rgba(5, 8, 13, 0.70);
+
+    border-radius: 10px;
+
+    border-left: 4px solid var(--vermelho);
+
+    padding: 30px;
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.45);
+
+    backdrop-filter: blur(8px);
+}
+
+.elemento1 > h1 {
+    font-family: 'Raleway', sans-serif;
+
+    font-size: 45px;
+
+    font-weight: 500;
+
+    line-height: 1.2;
+
+    color: var(--branco);
+}
+
+.elemento1 > h1 span {
+    color: var(--vermelho);
+}
+
+.elemento1 > h4 {
+    font-family: 'Poppins', sans-serif;
+
+    font-weight: 400;
+
+    font-size: 20px;
+
+    line-height: 1.5;
+
+    color: var(--branco);
+
+    width: 400px;
+
+    margin-top: 15px;
+}
+
+
+/* =========================================================
+   BOTÕES ORÇAMENTO
+   ========================================================= */
+
+.botoe {
+    display: flex;
+
+    justify-content: space-around;
+
+    width: 300px;
+
+    padding-top: 30px;
+
+    margin: 0;
+
+    gap: 15px;
+}
+
+
+/* =========================================================
+   FEEDBACK - CARROSSEL
+   ========================================================= */
+
+.feedback {
+    width: 100%;
+
+    min-height: 500px;
+
+    background-image:
+        linear-gradient(
+            to right,
+            rgba(244, 246, 248, 0.96),
+            rgba(255, 255, 255, 0.93)
+        ),
+        url('figurinha.png');
+
+    background-position: center;
+
+    background-size: cover;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin: auto;
+
+    padding: 70px 20px;
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* TÍTULO */
+
+.feedback > h1 {
+    font-family: 'Raleway', sans-serif;
+
+    font-weight: 800;
+
+    font-size: 30px;
+
+    line-height: 1.2;
+
+    color: var(--azul-escuro);
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   CONTAINER DO CARROSSEL
+   ========================================================= */
+
+.feedback-carousel {
+    width: 100%;
+
+    max-width: 750px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 10px 60px 20px;
+}
+
+
+/* =========================================================
+   SLIDES
+   ========================================================= */
+
+.feedback-track {
+    display: flex;
+
+    transition: transform 0.5s ease;
+
+    width: 100%;
+}
+
+.feedback-slide {
+    min-width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+}
+
+
+/* =========================================================
+   ASPAS
+   ========================================================= */
+
+.quote-mark {
+    font-size: 70px;
+
+    line-height: 0.7;
+
+    color: var(--vermelho);
+
+    font-family: Georgia, serif;
+
+    text-shadow:
+        2px 2px 5px rgba(0, 0, 0, 0.15);
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   TEXTO DO FEEDBACK
+   ========================================================= */
+
+.feedback-slide h3 {
+    font-family: 'Open Sans', sans-serif;
+
+    font-weight: 400;
+
+    font-size: 19px;
+
+    line-height: 1.6;
+
+    text-align: center;
+
+    width: 100%;
+
+    max-width: 600px;
+
+    color: var(--cinza-escuro);
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   FOTO DO CLIENTE
+   ========================================================= */
+
+.client-feed {
+    width: 75px;
+
+    height: 75px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 3px solid var(--azul);
+
+    padding: 0;
+
+    margin-bottom: 10px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================================================
+   NOME
+   ========================================================= */
+
+.feedback-slide .nome {
+    font-family: 'Open Sans', sans-serif;
+
+    font-weight: 700;
+
+    font-size: 16px;
+
+    color: var(--azul-escuro);
+}
+
+
+/* =========================================================
+   BOTÕES DO CARROSSEL
+   ========================================================= */
+
+.feedback-btn {
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 45px;
+
+    height: 45px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        var(--azul),
+        var(--azul-escuro)
+    );
+
+    color: var(--branco);
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    z-index: 5;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.20);
+
+    transition: all 0.3s ease;
+}
+
+.feedback-btn:hover {
+    background: linear-gradient(
+        135deg,
+        var(--vermelho),
+        var(--vermelho-escuro)
+    );
+
+    transform: translateY(-50%) scale(1.08);
+}
+
+.feedback-prev {
+    left: 5px;
+}
+
+.feedback-next {
+    right: 5px;
+}
+
+
+/* =========================================================
+   INDICADORES
+   ========================================================= */
+
+.feedback-dots {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 10px;
+}
+
+.feedback-dot {
+    width: 10px;
+
+    height: 10px;
+
+    border-radius: 50%;
+
+    background-color: var(--cinza);
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.feedback-dot.active {
+    width: 28px;
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+        90deg,
+        var(--azul),
+        var(--vermelho)
+    );
+}
+
+
+/* =========================================================
+   LINHA
+   ========================================================= */
+
+.linha-com-sombra {
+    width: 100%;
+
+    height: 2px;
+
+    background: linear-gradient(
+        to right,
+        transparent 0%,
+        var(--azul) 35%,
+        var(--vermelho) 65%,
+        transparent 100%
+    );
+
+    box-shadow:
+        0 4px 15px rgba(0, 102, 204, 0.25);
+}
+
+
+/* =========================================================
+   POP-UP
+   ========================================================= */
+
+.pop-up {
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(5, 8, 13, 0.75);
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 1000;
+
+    backdrop-filter: blur(5px);
+}
+
+.pop-up1 {
+    width: 400px;
+
+    max-width: 90%;
+
+    min-height: 300px;
+
+    background: linear-gradient(
+        145deg,
+        var(--azul-escuro),
+        var(--azul-medio)
+    );
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    border-radius: 10px;
+
+    margin: auto;
+
+    padding: 25px;
+
+    border-top: 4px solid var(--vermelho);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.55);
+}
+
+
+/* =========================================================
+   TÍTULO POP-UP
+   ========================================================= */
+
+.titulo-pop {
+    font-family: 'Inter', sans-serif;
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color: var(--branco);
+
+    margin-top: 5px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   BOTÃO POP-UP
+   ========================================================= */
+
+.botao-pop {
+    font-family: 'Poppins', sans-serif;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    color: var(--branco);
+
+    width: 310px;
+
+    max-width: 100%;
+
+    height: 45px;
+
+    letter-spacing: 1px;
+
+    background: linear-gradient(
+        135deg,
+        var(--vermelho),
+        var(--vermelho-escuro)
+    );
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    margin: 7px;
+
+    transition: 0.3s ease;
+}
+
+.botao-pop:hover {
+    background: linear-gradient(
+        135deg,
+        var(--azul-claro),
+        var(--azul)
+    );
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   INPUT
+   ========================================================= */
+
+.campo-input {
+    width: 100%;
+
+    height: 45px;
+
+    margin-top: 30px;
+
+    padding: 0 15px;
+
+    font-size: 16px;
+
+    color: var(--cinza-escuro);
+
+    background-color: var(--branco);
+
+    border: 2px solid transparent;
+
+    border-radius: 5px;
+
+    outline: none;
+
+    transition: all 0.3s ease;
+}
+
+.campo-input:focus {
+    border-color: var(--azul);
+
+    box-shadow:
+        0 0 0 3px rgba(0, 102, 204, 0.15);
+}
+
+.campo-input::placeholder,
+textarea::placeholder {
+    color: #777;
+
+    font-style: italic;
+
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   FORMULÁRIO
+   ========================================================= */
+
+.formulario {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(5, 8, 13, 0.75);
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 1000;
+
+    display: none;
+
+    backdrop-filter: blur(5px);
+}
+
+.formulario1 {
+    width: 400px;
+
+    max-width: 90%;
+
+    min-height: 390px;
+
+    background: linear-gradient(
+        145deg,
+        var(--azul-escuro),
+        var(--azul-medio)
+    );
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    border-radius: 10px;
+
+    margin: auto;
+
+    padding: 20px;
+
+    border-top: 4px solid var(--vermelho);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.55);
+}
+
+
+/* =========================================================
+   CAMPOS
+   ========================================================= */
+
+.campo {
+    width: 92%;
+
+    display: flex;
+
+    justify-content: space-around;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+/* =========================================================
+   RESULTADO
+   ========================================================= */
+
+.resultado {
+    width: 92%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding-top: 40px;
+
+    gap: 10px;
+}
+
+
+/* =========================================================
+   BOTÃO CÁLCULO
+   ========================================================= */
+
+.calculo {
+    font-family: 'Poppins', sans-serif;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    color: var(--branco);
+
+    width: 100%;
+
+    height: 45px;
+
+    letter-spacing: 1px;
+
+    background: linear-gradient(
+        135deg,
+        var(--vermelho),
+        var(--vermelho-escuro)
+    );
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.calculo:hover {
+    background: linear-gradient(
+        135deg,
+        var(--azul),
+        var(--azul-escuro)
+    );
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   BOTÃO SAIR
+   ========================================================= */
+
+.sair {
+    position: absolute;
+
+    top: 8%;
+    right: 30px;
+
+    width: 35px;
+    height: 35px;
+
+    background-color: var(--branco);
+
+    color: var(--vermelho);
+
+    border: none;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.3);
+
+    transition: 0.3s ease;
+}
+
+.sair:hover {
+    background-color: var(--vermelho);
+
+    color: var(--branco);
+
+    transform: rotate(90deg);
+}
+
+
+/* =========================================================
+   MISSÃO / VISÃO
+   ========================================================= */
+
+.fofa {
+    display: flex;
+
+    justify-content: space-around;
+
+    margin: auto;
+
+    gap: 40px;
+
+    padding: 30px;
+}
+
+.missao,
+.visao {
+    width: auto;
+}
+
+
+/* =========================================================
+   IMAGEM MISSÃO
+   ========================================================= */
+
+.imagem-missao {
+    width: 300px;
+
+    height: 300px;
+
+    padding-top: 20px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   TÍTULO MISSÃO
+   ========================================================= */
+
+.titulo-fofa {
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 25px;
+
+    font-weight: 900;
+
+    line-height: 1.2;
+
+    color: var(--vermelho);
+
+    text-shadow:
+        2px 2px 3px rgba(0, 0, 0, 0.25);
+
+    width: 300px;
+
+    text-align: center;
+
+    padding-top: 20px;
+}
+
+
+/* =========================================================
+   PARÁGRAFOS
+   ========================================================= */
+
+p {
+    font-family: 'Open Sans', sans-serif;
+
+    font-weight: 400;
+
+    font-size: 17px;
+
+    line-height: 1.6;
+
+    text-align: center;
+
+    width: 300px;
+
+    padding-top: 20px;
+
+    color: rgba(255, 255, 255, 0.92);
+}
+
+
+/* =========================================================
+   LISTAS
+   ========================================================= */
+
+ul {
+    list-style-type: disc;
+
+    padding-left: 20px;
+
+    color: var(--cinza-escuro);
+
+    width: auto;
+
+    padding-top: 20px;
+
+    text-align: center;
+}
+
+li {
+    font-family: 'Open Sans', sans-serif;
+
+    font-weight: 400;
+
+    font-size: 15px;
+
+    line-height: 1.4;
+
+    padding-bottom: 20px;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   SOBRE / VISÃO
+   ========================================================= */
+
+.divisa {
+    background-image:
+        linear-gradient(
+            to right,
+            rgba(5, 8, 13, 0.90),
+            rgba(7, 20, 38, 0.80),
+            rgba(5, 8, 13, 0.95)
+        ),
+        url('visão.png');
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.35);
+
+    background-position: center;
+
+    background-size: cover;
+
+    width: 100%;
+
+    min-height: 700px;
+
+    text-align: center;
+
+    align-items: center;
+
+    padding: 70px 20px;
+
+    position: relative;
+}
+
+.divisa::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: linear-gradient(
+        90deg,
+        var(--azul),
+        var(--vermelho)
+    );
+}
+
+.titulo-sobre {
+    font-family: 'Open Sans', sans-serif;
+
+    font-weight: 600;
+
+    font-size: 30px;
+
+    color: var(--branco);
+
+    text-shadow:
+        2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+/* =========================================================
+   BOTÃO FIXO DO WHATSAPP
+   ========================================================= */
+
+.whatsapp-fixo {
+    position: fixed;
+
+    width: 65px;
+    height: 65px;
+
+    right: 25px;
+    bottom: 25px;
+
+    background-color: #25D366;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 9999;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.35);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.whatsapp-fixo img {
+    width: 38px;
+    height: 38px;
+
+    object-fit: contain;
+}
+
+.whatsapp-fixo:hover {
+    transform: scale(1.10);
+
+    box-shadow:
+        0 6px 20px rgba(37, 211, 102, 0.55);
+}
+
+.whatsapp-fixo::before {
+    content: "";
+
+    position: absolute;
+
+    width: 65px;
+    height: 65px;
+
+    border-radius: 50%;
+
+    border: 2px solid #25D366;
+
+    animation: pulsar-whatsapp 2s infinite;
+}
+
+
+
+/* =========================================================
+   CARROSSEL DE FEEDBACK
+========================================================= */
+
+.carrossel-feedback {
+    width: 100%;
+    max-width: 850px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 25px;
+
+    margin-top: 15px;
+}
+
+
+/* =========================================================
+   CONTEÚDO DO FEEDBACK
+========================================================= */
+
+.feedback-conteudo {
+    width: 650px;
+    max-width: 80%;
+
+    min-height: 270px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 10px 20px;
+
+    transition: opacity 0.3s ease;
+}
+
+
+/* =========================================================
+   TEXTO
+========================================================= */
+
+#feedback-texto {
+    font-family: 'Open Sans', sans-serif;
+
+    font-weight: 400;
+
+    font-size: 19px;
+
+    line-height: 1.6;
+
+    text-align: center;
+
+    width: 100%;
+
+    color: var(--cinza-escuro);
+
+    padding: 0 10px 20px;
+}
+
+
+/* =========================================================
+   ASPAS
+========================================================= */
+
+.quote-mark {
+    font-size: 60px;
+
+    line-height: 45px;
+
+    color: var(--vermelho);
+
+    font-family: Georgia, serif;
+
+    text-shadow:
+        2px 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================================
+   FOTO
+========================================================= */
+
+.client-feed {
+    width: 75px;
+    height: 75px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    padding: 0;
+
+    border: 3px solid var(--azul);
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.15);
+
+    margin-bottom: 8px;
+}
+
+
+/* =========================================================
+   NOME
+========================================================= */
+
+.feedback-conteudo .nome {
+    font-family: 'Open Sans', sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    color: var(--azul-escuro);
+}
+
+
+/* =========================================================
+   SETAS
+========================================================= */
+
+.seta-feedback {
+    width: 45px;
+    height: 45px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: var(--azul-escuro);
+
+    color: var(--branco);
+
+    font-size: 25px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.20);
+}
+
+
+.seta-feedback:hover {
+    background: var(--vermelho);
+
+    transform: scale(1.08);
+}
+
+
+/* =========================================================
+   INDICADORES
+========================================================= */
+
+.indicadores-feedback {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 15px;
+}
+
+
+.indicador {
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    background-color: var(--cinza);
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+
+.indicador.ativo {
+    width: 25px;
+
+    border-radius: 10px;
+
+    background-color: var(--vermelho);
+}
+
+
+/* =========================================================
+   ANIMAÇÃO
+========================================================= */
+
+.feedback-conteudo.trocando {
+    opacity: 0;
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 650px) {
+
+    .carrossel-feedback {
+        gap: 5px;
+
+        width: 100%;
+    }
+
+
+    .feedback-conteudo {
+        width: 100%;
+
+        max-width: 90%;
+
+        min-height: 300px;
+
+        padding: 10px;
+    }
+
+
+    #feedback-texto {
+        font-size: 15px;
+
+        line-height: 1.5;
+
+        padding: 0 5px 20px;
+    }
+
+
+    .seta-feedback {
+        width: 38px;
+        height: 38px;
+
+        font-size: 20px;
+    }
+
+
+    .quote-mark {
+        font-size: 50px;
+    }
+
+
+    .client-feed {
+        width: 65px;
+        height: 65px;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .carrossel-feedback {
+        gap: 2px;
+    }
+
+
+    .feedback-conteudo {
+        max-width: 85%;
+    }
+
+
+    #feedback-texto {
+        font-size: 14px;
+    }
+
+
+    .seta-feedback {
+        width: 34px;
+        height: 34px;
+
+        font-size: 18px;
+    }
+
+}
+
+
+
+@keyframes pulsar-whatsapp {
+
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    70% {
+        transform: scale(1.35);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1.35);
+        opacity: 0;
+    }
+}
+
+
+/* =========================================================
+   GALERIA DE OBRAS
+   ========================================================= */
+
+.galeria {
+    width: 100%;
+
+    padding: 70px 30px;
+
+    background-color: var(--cinza-claro);
+
+    text-align: center;
+}
+
+.galeria .traco {
+    margin-bottom: 0;
+}
+
+.galeria .titulo-sobre {
+    margin-bottom: 15px;
+}
+
+.texto-galeria {
+    width: 100%;
+
+    max-width: 700px;
+
+    margin: 0 auto 40px;
+
+    padding: 0;
+
+    font-family: 'Open Sans', sans-serif;
+
+    font-size: 17px;
+
+    line-height: 1.6;
+
+    color: var(--cinza-escuro);
+}
+
+
+/* =========================================================
+   ÁREA DAS FOTOS
+   ========================================================= */
+
+.galeria-fotos {
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+/* =========================================================
+   FOTO DA OBRA
+   ========================================================= */
+
+.foto-obra {
+    width: 100%;
+
+    height: 280px;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background-color: var(--branco);
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.15);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.foto-obra img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+.foto-obra:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.foto-obra:hover img {
+    transform: scale(1.08);
+}
+
+
+/* =========================================================
+   RODAPÉ
+   ========================================================= */
+
+.rodape {
+    background: linear-gradient(
+        135deg,
+        #03070c,
+        var(--azul-escuro)
+    );
+
+    color: var(--branco);
+
+    padding: 40px 20px;
+
+    text-align: center;
+
+    font-family: Arial, sans-serif;
+
+    border-top: 3px solid var(--vermelho);
+}
+
+.rodape-conteudo p {
+    margin: auto;
+
+    font-size: 14px;
+
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.redes-sociais {
+    margin-top: 20px;
+}
+
+.redes-sociais a {
+    color: var(--cinza);
+
+    margin: 0 10px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: color 0.3s;
+}
+
+.links-rodape a:hover,
+.redes-sociais a:hover {
+    color: var(--vermelho);
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .galeria {
+        padding: 60px 20px;
+    }
+
+    .galeria-fotos {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 15px;
+    }
+
+    .foto-obra {
+        height: 250px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .menu {
+        padding: 6px 12px;
+
+        min-height: 62px;
+    }
+
+    .logo {
+        width: 85px;
+    }
+
+    .opcao {
+        margin-right: 0;
+
+        gap: 2px;
+    }
+
+    .mn {
+        width: auto;
+
+        min-width: 65px;
+
+        font-size: 11px;
+
+        letter-spacing: .5px;
+    }
+
+    .cabeca {
+        min-height: auto;
+
+        margin-top: 35px;
+
+        padding: 55px 15px 45px;
+
+        gap: 25px;
+    }
+
+    .letreiro {
+        width: min(100%, 430px);
+
+        padding: 20px;
+    }
+
+    .titulo {
+        font-size: 30px;
+    }
+
+    .subtitulo {
+        font-size: 15px;
+    }
+
+    .figura {
+        width: min(75vw, 300px);
+
+        padding-top: 10px;
+    }
+
+    .botoes,
+    .botoe {
+        width: 100%;
+
+        max-width: 300px;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .demostrativo {
+        flex-wrap: wrap;
+
+        gap: 25px;
+
+        padding: 25px 15px;
+    }
+
+    .produt {
+        flex: 1 1 180px;
+
+        justify-content: center;
+    }
+
+    .frase {
+        min-height: 180px;
+
+        padding: 30px 15px;
+
+        gap: 12px;
+    }
+
+    .frase > h1 {
+        font-size: 23px;
+
+        text-align: center;
+    }
+
+    .frase > h4 {
+        font-size: 17px;
+
+        text-align: center;
+    }
+
+    .animar {
+        width: 100px;
+    }
+
+    .elemento {
+        min-height: 520px;
+
+        padding: 35px 15px;
+
+        background-position: center;
+    }
+
+    .elemento1 {
+        width: min(95%, 520px);
+
+        padding: 25px 20px;
+    }
+
+    .elemento1 > h1 {
+        font-size: 31px;
+    }
+
+    .elemento1 > h4 {
+        width: 100%;
+
+        font-size: 16px;
+    }
+
+    /* FEEDBACK */
+
+    .feedback {
+        min-height: 480px;
+
+        padding: 50px 10px;
+    }
+
+    .feedback > h1 {
+        font-size: 25px;
+
+        text-align: center;
+    }
+
+    .feedback-carousel {
+        padding-left: 45px;
+
+        padding-right: 45px;
+    }
+
+    .feedback-slide {
+        padding: 15px 5px;
+    }
+
+    .feedback-slide h3 {
+        font-size: 16px;
+    }
+
+    .feedback-btn {
+        width: 38px;
+
+        height: 38px;
+
+        font-size: 20px;
+    }
+
+    .feedback-prev {
+        left: 0;
+    }
+
+    .feedback-next {
+        right: 0;
+    }
+
+    .fofa {
+        flex-wrap: wrap;
+
+        padding: 20px 10px;
+
+        gap: 35px;
+    }
+
+    .missao,
+    .visao,
+    .valores {
+        width: min(100%, 330px);
+    }
+
+    .imagem-missao {
+        width: min(80vw, 260px);
+
+        height: 260px;
+
+        margin: auto;
+    }
+
+    .titulo-fofa,
+    p {
+        width: 100%;
+    }
+
+    .divisa {
+        padding: 50px 15px;
+    }
+
+    .pop-up1,
+    .formulario1 {
+        width: min(92%, 400px);
+
+        max-width: none;
+    }
+
+    .botao-pop,
+    .campo-input {
+        width: 100%;
+    }
+
+    .rodape {
+        padding: 35px 15px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .menu {
+        min-height: 65px;
+
+        padding: 5px 8px;
+
+        gap: 5px;
+    }
+
+    .opcao {
+        width: auto;
+
+        align-items: center;
+
+        gap: 5px;
+
+        padding-right: 5px;
+    }
+
+    .mn {
+        width: auto;
+
+        font-size: 12px;
+
+        text-align: center;
+    }
+
+    .mn::after {
+        bottom: -4px;
+    }
+
+    .logo {
+        width: 90px;
+
+        height: auto;
+    }
+
+    .cabeca {
+        flex-direction: column;
+
+        min-height: 650px;
+
+        height: auto;
+
+        padding: 40px 15px;
+
+        text-align: center;
+
+        margin-top: 40px;
+    }
+
+    .figura {
+        width: 80%;
+
+        padding-top: 20px;
+    }
+
+    .letreiro {
+        width: 95%;
+
+        padding: 20px 15px;
+    }
+
+    .letreiro h1.titulo {
+        font-size: 28px;
+
+        line-height: 1.3;
+    }
+
+    .subtitulo {
+        font-size: 16px;
+    }
+
+    .traco {
+        font-size: 35px;
+    }
+
+    .botoes {
+        flex-direction: column;
+
+        align-items: center;
+
+        width: 100%;
+
+        padding-top: 20px;
+
+        gap: 10px;
+    }
+
+    .botao,
+    .botao1 {
+        width: 90%;
+
+        max-width: 300px;
+    }
+
+    .demostrativo {
+        flex-direction: column;
+
+        height: auto;
+
+        gap: 20px;
+
+        padding: 30px 20px;
+    }
+
+    .produt {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .title {
+        font-size: 21px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+    }
+
+    .frase {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 30px 15px;
+
+        height: auto;
+
+        gap: 15px;
+    }
+
+    .frase > h1 {
+        font-size: 23px;
+    }
+
+    .frase > h4 {
+        font-size: 18px;
+    }
+
+    ul {
+        list-style-type: none;
+
+        padding-left: 0;
+
+        width: 100%;
+    }
+
+    .animar {
+        width: 100px;
+
+        margin-top: 10px;
+    }
+
+    .elemento {
+        flex-direction: column;
+
+        background-position: center;
+
+        width: 100%;
+
+        min-height: 650px;
+
+        height: auto;
+
+        padding: 30px 15px;
+
+        text-align: center;
+    }
+
+    .elemento1 {
+        width: 95%;
+
+        padding: 25px 15px;
+    }
+
+    .elemento1 h1 {
+        font-size: 28px;
+    }
+
+    .elemento1 h4 {
+        width: 100%;
+
+        font-size: 16px;
+    }
+
+    .botoe {
+        width: 100%;
+
+        max-width: 300px;
+
+        margin: auto;
+    }
+
+    .galeria {
+        padding: 50px 15px;
+    }
+
+    .galeria .titulo-sobre {
+        font-size: 25px;
+    }
+
+    .texto-galeria {
+        font-size: 15px;
+
+        margin-bottom: 25px;
+    }
+
+    .galeria-fotos {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .foto-obra {
+        height: 230px;
+    }
+
+    .whatsapp-fixo {
+        width: 58px;
+
+        height: 58px;
+
+        right: 18px;
+
+        bottom: 18px;
+    }
+
+    .whatsapp-fixo img {
+        width: 34px;
+
+        height: 34px;
+    }
+
+    .whatsapp-fixo::before {
+        width: 58px;
+
+        height: 58px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .topo {
+        height: 30px;
+    }
+
+    .menu {
+        top: 30px;
+
+        padding: 4px 7px;
+    }
+
+    .logo {
+        width: 72px;
+    }
+
+    .mn {
+        min-width: auto;
+
+        padding: 5px 4px;
+
+        font-size: 9px;
+
+        letter-spacing: 0;
+    }
+
+    .cabeca {
+        margin-top: 30px;
+
+        padding: 40px 10px 35px;
+    }
+
+    .letreiro {
+        padding: 18px 12px;
+    }
+
+    .titulo {
+        font-size: 26px !important;
+    }
+
+    .subtitulo {
+        font-size: 13px;
+    }
+
+    .traco {
+        font-size: 30px;
+    }
+
+    .figura {
+        width: min(80vw, 260px);
+    }
+
+    .demostrativo {
+        gap: 18px;
+    }
+
+    .produt {
+        flex-basis: 100%;
+    }
+
+    .frase > h1 {
+        font-size: 20px;
+    }
+
+    .frase > h4 {
+        font-size: 15px;
+    }
+
+    .elemento {
+        min-height: 560px;
+    }
+
+    .elemento1 {
+        width: 96%;
+
+        padding: 20px 12px;
+    }
+
+    .elemento1 > h1 {
+        font-size: 26px;
+    }
+
+    .elemento1 > h4 {
+        font-size: 14px;
+    }
+
+    /* FEEDBACK CELULAR */
+
+    .feedback {
+        min-height: 500px;
+
+        padding: 45px 5px;
+    }
+
+    .feedback > h1 {
+        font-size: 21px;
+    }
+
+    .feedback-carousel {
+        padding-left: 38px;
+
+        padding-right: 38px;
+    }
+
+    .feedback-slide h3 {
+        font-size: 14px;
+
+        line-height: 1.5;
+    }
+
+    .quote-mark {
+        font-size: 55px;
+    }
+
+    .client-feed {
+        width: 65px;
+
+        height: 65px;
+    }
+
+    .feedback-btn {
+        width: 32px;
+
+        height: 32px;
+
+        font-size: 17px;
+    }
+
+    .feedback-dot {
+        width: 8px;
+
+        height: 8px;
+    }
+
+    .feedback-dot.active {
+        width: 22px;
+    }
+
+    .titulo-sobre {
+        font-size: 22px;
+    }
+
+    .imagem-missao {
+        width: 220px;
+
+        height: 220px;
+    }
+
+    .titulo-fofa {
+        font-size: 21px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    li {
+        font-size: 14px;
+    }
+
+    .pop-up1,
+    .formulario1 {
+        width: 94%;
+
+        padding: 20px 15px;
+    }
+
+    .titulo-pop {
+        font-size: 18px;
+    }
+
+    .sair {
+        right: 12px;
+
+        top: 15px;
+
+        width: 32px;
+
+        height: 32px;
+    }
+
+    .whatsapp-fixo {
+        right: 14px;
+
+        bottom: 14px;
+
+        width: 56px;
+
+        height: 56px;
+    }
+
+    .whatsapp-fixo img {
+        width: 32px;
+
+        height: 32px;
+    }
+
+    .whatsapp-fixo::before {
+        width: 56px;
+
+        height: 56px;
+    }
+}
+
+
+@media (max-width: 400px) {
+
+    .menu {
+        padding: 4px;
+    }
+
+    .mn {
+        font-size: 10px;
+    }
+
+    .logo {
+        width: 75px;
+    }
+
+    .titulo {
+        font-size: 24px !important;
+    }
+
+    .subtitulo {
+        font-size: 14px;
+    }
+
+    .elemento1 h1 {
+        font-size: 24px;
+    }
+
+    .elemento1 h4 {
+        font-size: 15px;
+    }
+
+    .titulo-sobre {
+        font-size: 21px;
+    }
+
+    .galeria {
+        padding: 40px 10px;
+    }
+
+    .galeria .titulo-sobre {
+        font-size: 22px;
+    }
+
+    .texto-galeria {
+        font-size: 14px;
+    }
+
+    .foto-obra {
+        height: 210px;
+    }
+}
+
+
+/* =========================================================
+   AJUSTE GERAL DE IMAGENS
+   ========================================================= */
+
+img {
+    max-width: 100%;
+}
